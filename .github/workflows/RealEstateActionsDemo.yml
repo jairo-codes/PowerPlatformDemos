@@ -1,3 +1,7 @@
+name: BREDeployer
+on: push
+     
+
 jobs:
   build:
 
