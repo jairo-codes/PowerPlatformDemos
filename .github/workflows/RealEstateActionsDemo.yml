@@ -15,8 +15,9 @@ jobs:
       uses: microsoft/powerplatform-actions/export-solution@v1
       with:
         environment-url: secrets.DEPLOYMENT_APPSOURCEURL
-        user-name: secrets.DEPLOYMENT_APPID
-        password-secret: ${{ secrets.DEPLOYMENT_APPSECRET }}
+        app-id: secrets.DEPLOYMENT_APPID
+        client-secret: ${{ secrets.DEPLOYMENT_APPSECRET }}
+        tenant-id:     ${{ secrets.DEPLOYMENT_TENANTID }}
         solution-name: BasicRealEstate
         solution-output-file: 'BasicRealEstate.zip'
         working-directory: 'out'
@@ -33,8 +34,9 @@ jobs:
       uses: microsoft/powerplatform-actions/publish-solution@v1
       with:
         environment-url: secrets.DEPLOYMENT_APPSOURCEURL
-        user-name: secrets.DEPLOYMENT_APPID
-        password-secret: ${{ secrets.DEPLOYMENT_APPSECRET }}
+         app-id: secrets.DEPLOYMENT_APPID
+         client-secret: ${{ secrets.DEPLOYMENT_APPSECRET }}
+         tenant-id:     ${{ secrets.DEPLOYMENT_TENANTID }}
 
     - name: Prepare solution changes for check-in into source control
       uses: microsoft/powerplatform-actions/branch-solution@v1
