@@ -11,6 +11,14 @@ jobs:
     - name: Install Power Platform Tools
       uses: microsoft/powerplatform-actions/actions-install@v1
 
+    - name: WhoAmI (Service Principal)
+      uses: microsoft/powerplatform-actions/who-am-i@v1
+      with:
+          environment-url: ${{ secrets.DEPLOYMENT_APPSOURCEURL }}
+          app-id:        ${{ secrets.DEPLOYMENT_APPID }}
+          client-secret: ${{ secrets.DEPLOYMENT_APPSECRET }}
+          tenant-id:     ${{ secrets.DEPLOYMENT_TENANTID }}
+
     - name: Export Solution
       uses: microsoft/powerplatform-actions/export-solution@v1
       with:
@@ -21,14 +29,6 @@ jobs:
         solution-name: BasicRealEstate
         solution-output-file: 'BasicRealEstate.zip'
         working-directory: 'out'
-    - name: WhoAmI (Service Principal)
-      uses: microsoft/powerplatform-actions/who-am-i@v1
-      with:
-          environment-url: ${{ secrets.DEPLOYMENT_APPSOURCEURL }}
-          app-id:        ${{ secrets.DEPLOYMENT_APPID }}
-          client-secret: ${{ secrets.DEPLOYMENT_APPSECRET }}
-          tenant-id:     ${{ secrets.DEPLOYMENT_TENANTID }}
-
 
     - name: Unpack Solution
       uses: microsoft/powerplatform-actions/unpack-solution@v1
