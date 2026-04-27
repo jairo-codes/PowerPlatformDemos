@@ -28,7 +28,7 @@ jobs:
         tenant-id:     ${{ secrets.DEPLOYMENT_TENANTID }}
         solution-name: 'BasicRealEstate'
         solution-output-file: 'BasicRealEstate.zip'
-        working-directory: 'out'
+
 
     - name: Unpack Solution
       uses: microsoft/powerplatform-actions/unpack-solution@v1
