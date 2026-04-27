@@ -32,8 +32,8 @@ jobs:
     - name: Unpack Solution
       uses: microsoft/powerplatform-actions/unpack-solution@v1
       with:
-          solution-file: 'out/BasicRealEstate.zip'
-          solution-folder: 'out/solutions/BasicRealEstate'
+          solution-file: 'BasicRealEstate.zip'
+          solution-folder: 'solutions/BasicRealEstate'
           solution-type: 'Unmanaged'
           overwrite-files: true
 
