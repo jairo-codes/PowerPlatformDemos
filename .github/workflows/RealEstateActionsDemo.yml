@@ -22,11 +22,11 @@ jobs:
     - name: Export Solution
       uses: microsoft/powerplatform-actions/export-solution@v1
       with:
-        environment-url: secrets.DEPLOYMENT_APPSOURCEURL
-        app-id: secrets.DEPLOYMENT_APPID
+        environment-url: ${{ secrets.DEPLOYMENT_APPSOURCEURL }}
+        app-id: ${{ secrets.DEPLOYMENT_APPID }}
         client-secret: ${{ secrets.DEPLOYMENT_APPSECRET }}
         tenant-id:     ${{ secrets.DEPLOYMENT_TENANTID }}
-        solution-name: BasicRealEstate
+        solution-name: 'BasicRealEstate'
         solution-output-file: 'BasicRealEstate.zip'
         working-directory: 'out'
 
@@ -41,8 +41,8 @@ jobs:
     - name: Publish Solution
       uses: microsoft/powerplatform-actions/publish-solution@v1
       with:
-        environment-url: secrets.DEPLOYMENT_APPSOURCEURL
-        app-id: secrets.DEPLOYMENT_APPID
+        environment-url: ${{ secrets.DEPLOYMENT_APPSOURCEURL }}
+        app-id: ${{ secrets.DEPLOYMENT_APPID }}
         client-secret: ${{ secrets.DEPLOYMENT_APPSECRET }}
         tenant-id:     ${{ secrets.DEPLOYMENT_TENANTID }}
 
