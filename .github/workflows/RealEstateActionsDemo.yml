@@ -49,5 +49,6 @@ jobs:
       uses: microsoft/powerplatform-actions/branch-solution@v1
       with:
           solution-folder: 'solutions/BasicRealEstate'
-          solution-target-folder: 'src/solutions/BasicRealEstate'
+          solution-target-folder: 'solutions/BasicRealEstate'
           repo-token: ${{ secrets.DEPLOYMENT_BRE_TOKEN }}
+          allow-empty-commit: true
