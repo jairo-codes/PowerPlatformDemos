@@ -48,6 +48,6 @@ jobs:
     - name: Prepare solution changes for check-in into source control
       uses: microsoft/powerplatform-actions/branch-solution@v1
       with:
-          solution-folder: 'out/solutions/BasicRealEstate'
+          solution-folder: 'solutions/BasicRealEstate'
           solution-target-folder: 'src/solutions/BasicRealEstate'
-          token: ${{ secrets.DEPLOYMENT_BRE_TOKEN }}
+          repo-token: ${{ secrets.DEPLOYMENT_BRE_TOKEN }}
