@@ -51,4 +51,5 @@ jobs:
           solution-folder: 'solutions/BasicRealEstate'
           solution-target-folder: 'solutions/BasicRealEstate'
           repo-token: ${{ secrets.DEPLOYMENT_BRE_TOKEN }}
+          branch-name: 'first-branch'
           allow-empty-commit: true
