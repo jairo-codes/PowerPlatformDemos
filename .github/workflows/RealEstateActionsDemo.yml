@@ -39,13 +39,13 @@ jobs:
           solution-type: 'Unmanaged'
           overwrite-files: true
 
-    - name: Publish Solution
-      uses: microsoft/powerplatform-actions/publish-solution@v1
-      with:
-          environment-url: ${{ secrets.DEPLOYMENT_APPSOURCEURL }}
-          app-id: ${{ secrets.DEPLOYMENT_APPID }}
-          client-secret: ${{ secrets.DEPLOYMENT_APPSECRET }}
-          tenant-id:     ${{ secrets.DEPLOYMENT_TENANTID }}
+    #- name: Publish Solution
+      #uses: microsoft/powerplatform-actions/publish-solution@v1
+      #with:
+          #environment-url: ${{ secrets.DEPLOYMENT_APPSOURCEURL }}
+          #app-id: ${{ secrets.DEPLOYMENT_APPID }}
+          #client-secret: ${{ secrets.DEPLOYMENT_APPSECRET }}
+          #tenant-id:     ${{ secrets.DEPLOYMENT_TENANTID }}
 
 
 
