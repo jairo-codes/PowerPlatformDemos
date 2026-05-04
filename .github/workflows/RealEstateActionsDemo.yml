@@ -46,8 +46,8 @@ jobs:
           tenant-id:     ${{ secrets.DEPLOYMENT_TENANTID }}
 
     - name: Checkout code
-          uses: actions/checkout@v4
-          with:
+      uses: actions/checkout@v4
+      with:
               fetch-depth: 0  # Full history needed for git operations
 
     - name: Prepare solution changes for check-in into source control
