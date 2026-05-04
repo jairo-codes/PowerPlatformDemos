@@ -18,18 +18,7 @@ jobs:
           app-id:        ${{ secrets.DEPLOYMENT_APPID }}
           client-secret: ${{ secrets.DEPLOYMENT_APPSECRET }}
           tenant-id:     ${{ secrets.DEPLOYMENT_TENANTID }}
-
-    - name: Checkout code
-      uses: actions/checkout@v4
-      with:
-              fetch-depth: 0  # Full history needed for git operations
-              
-    - name: Configure git
-      run: |
-         git config user.name "Jairo"
-         git config user.email "jairo-codes@github.com"
-
-              
+        
 
     - name: Export Solution
       uses: microsoft/powerplatform-actions/export-solution@v1
@@ -67,16 +56,4 @@ jobs:
           branch-name: 'first-branch'
           allow-empty-commit: true
 
-    - name: Commit changes
-      run: |
-          if [[ -n "$(git status --porcelain)" ]]; then
-            git add exports/
-            git commit -m "Automated export on $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
-          else
-            echo "No changes to commit."
-          fi
 
-    - name: Push changes
-      if: success()
-      run: |
-          git push origin HEAD:main
