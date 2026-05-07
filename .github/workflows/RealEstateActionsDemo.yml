@@ -12,7 +12,7 @@ jobs:
     - name: Install Power Platform Tools
       uses: microsoft/powerplatform-actions/actions-install@v1
 
-    - name: WhoAmI (Service Principal)
+    - name: WhoAmI (Service Principal) - Jairo
       uses: microsoft/powerplatform-actions/who-am-i@v1
       with:
           environment-url: ${{ secrets.DEPLOYMENT_APPSOURCEURL }}
